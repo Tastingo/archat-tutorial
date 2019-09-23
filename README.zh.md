@@ -14,8 +14,8 @@ AR聊天室为用户提供匿名IRC聊天频道，基于排名算法自动计算
 * 拥有较高账户指数与支付了CAT的用户可在该周期內（一般3天）聊天，否则在一定时间后会被踢出。
 
 ### 如何获取CAT Token
-* 拥有较高的账户指数（[如何提高账户指数]()）。每个周期会对账户指数前10,000名，随机选取100名进行airdrop；
-* 通过[合约](https://ropsten.etherscan.io/address/0x351C54BE57c7d49CB074A47E030d8c5994eEAA16)购买，调用合约`exchange`方法，转入一定数量的ETH，可获得CAT。兑换请参见[模型]()。
+* 拥有较高的账户指数（[如何提高账户指数](https://github.com/Tastingo/archat-tutorial/blob/master/ar-ch.pdf)）。每个周期会对账户指数前10,000名，随机选取100名进行airdrop；
+* 通过[合约](https://ropsten.etherscan.io/address/0x351C54BE57c7d49CB074A47E030d8c5994eEAA16)购买，调用合约`exchange`方法，转入一定数量的ETH，可获得CAT。兑换请参见[模型](https://github.com/Tastingo/archat-tutorial/blob/master/cat-ch.pdf)。
 
 ### 如何充值CAT Token至聊天室账户
 * 调用[合约](https://ropsten.etherscan.io/address/0xf8711d5FB1387B3d4b3ae4Bc47F40593b192bC85)`transfer`方法，向[账户](https://ropsten.etherscan.io/address/0xf8711d5FB1387B3d4b3ae4Bc47F40593b192bC85)转入相应数量的CAT，完成充值。
