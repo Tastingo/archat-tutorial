@@ -20,3 +20,6 @@ AR聊天室为用户提供匿名IRC聊天频道，基于排名算法自动计算
 
 ### 如何充值CAT Token至聊天室账户
 * 调用[合约](https://ropsten.etherscan.io/address/0xf8711d5FB1387B3d4b3ae4Bc47F40593b192bC85)`transfer`方法，向[账户](https://ropsten.etherscan.io/address/0xf8711d5FB1387B3d4b3ae4Bc47F40593b192bC85)转入相应数量的CAT，完成充值。
+
+### 语言
+#### [EN](README.md)|[中文](README.zh.md)
