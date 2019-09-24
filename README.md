@@ -14,7 +14,7 @@ The Chatroom is built upon IRC, to enter into the chatroom, you need to be an ac
 * Type `".help"` to view the complete list of commands of the chatroom;
 * Type `".cbind"` to call the chat_bot to bind your address, you will enter into a private chat with the chatbot;
 * Enter [your eth address]:[your signature of nick] in the private chat;
-* To get you signature of the nick, visit [the website](http://39.107.32.62:8020). If you would like to sign offline, visit the [repo] (https://github.com/Tastingo/web3js-signature);
+* To get you signature of the nick, visit [the website](http://39.107.32.62:8020). If you would like to sign offline, visit the [repo](https://github.com/Tastingo/web3js-signature);
 * Then you could go back to the chatroom and chat with the ETHers！ 
 
 ### FAQs
