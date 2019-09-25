@@ -1,25 +1,38 @@
-# AR聊天室教程
+# ETH活跃分子才能加入的聊天室 ETHERACT 聊天室
 
-### 什么是AR聊天室
-AR聊天室为用户提供匿名IRC聊天频道，基于排名算法自动计算全网账户（目前已支持以太坊）指数，拥有较高账户指数的区块链用户可无门槛进入聊天室，否则需支付一定代币（CAT Token）。
+### ETHERACT 聊天室
+ETHERACT聊天室是为ETH地址提供的一个匿名的聊天室。聊天室中唯一的身份是你的以太坊地址。
+
+聊天室建立在IRC上，进入聊天室之前。你需要先绑定你的以太坊地址。
 
 ### 如何进入聊天室
-* 登录[IRC freenode](https://webchat.freenode.net/)，进入聊天室频道`/join #archat`
-* 查看相关帮助`.help`，目前聊天室支持API包括：
-    - `.cbind [address]:[signature]`，绑定（以太坊）地址与nickname的签名
-    - `.cinfo`，查询个人信息
-    - `.ar_of_eth [address]`，查询某个地址的account rank
-    - `.ar_top`，查询top5 account rank信息
-    - `.get_cat`，获取CAT Token介绍
-* 拥有较高账户指数与支付了CAT的用户可在该周期內（一般3天）聊天，否则在一定时间后会被踢出。
+* 登录[IRC freenode](https://webchat.freenode.net/)，用任意昵称（比如Vitalk）进入聊天室频道`/join #archat`
+* CHAT BOT会提示你绑定你的地址：`Welcome Vitalik, please bind you nick to eth address ASAP. Type ".help" check how to bind your address";` （欢迎Vitalik，请尽快绑定你的以太坊地址。在聊天框输出“.help"查看如何绑定地址）
+* 输入`".cbind" ` 开始绑定地址，你将进入和CHAT BOT的私聊频道
+* 在私聊频道中输入 [你的以太坊地址]:[以太坊地址绑定昵称的确认信息]。你可以用下面的[小工具](http://39.107.32.62:8020/)进行在线或者离线签名
+* 完成地址绑定，查询地址的活跃分数，就可以和ETHers进行聊天啦
 
-### 如何获取CAT Token
-* 拥有较高的账户指数（[如何提高账户指数](https://github.com/Tastingo/archat-tutorial/blob/master/ar-ch.pdf)）。每个周期会对账户指数前10,000名，随机选取100名进行airdrop；
-* 每个周期对进入聊天室的地址给予等同于其AR的CAT；
-* 通过[合约](https://ropsten.etherscan.io/address/0x351C54BE57c7d49CB074A47E030d8c5994eEAA16)购买，调用合约`exchange`方法，转入一定数量的ETH，可获得CAT。兑换请参见[模型](https://github.com/Tastingo/archat-tutorial/blob/master/cat-ch.pdf)。
+### FAQs
+#### 1. 为什么我绑定了我的ETH地址，还是没有办法进入聊天室?
+   - 聊天室是为以太坊的“活跃”地址提供的，智能合约会按照地址的“活跃度”分数在地址完成绑定后想地址发放CAT token，你需要至少持有6个CAT token才能在聊天室中聊天
 
-### 如何充值CAT Token至聊天室账户
-* 调用[合约](https://ropsten.etherscan.io/address/0xf8711d5FB1387B3d4b3ae4Bc47F40593b192bC85)`transfer`方法，向[账户](https://ropsten.etherscan.io/address/0xf8711d5FB1387B3d4b3ae4Bc47F40593b192bC85)转入相应数量的CAT，完成充值。
+#### 2. 活跃度分数是如何计算的?
+   - 我们参考了账户指数算法来计算地址的活跃度。账户活跃度主要由该地址的币量、币龄和地址交易关系图计算决定。了解更多关于[账户指数](https://github.com/Tastingo/archat-tutorial/blob/master/ar-ch.pdf)
+    
+#### 3. CAT 是什么，如何获得CAT？
+   - CAT是进入聊天室的代币，只有持有最少6个CAT的地址才能进入聊天室
+   - 进入聊天室绑定地址后，CAT合约会根据地址的活跃度向地址发放CAT
+   - 你也可以调用CAT合约中的`exchange`功能，向合约发送ETH，兑换CAT。了解CAT的[兑换模型](https://github.com/Tastingo/archat-tutorial/blob/master/cat-ch.pdf)
+   
+#### 4. 玩转聊天室相关指令
+   - `.cbind [address]:[signature]`，绑定（以太坊）地址与nickname的签名
+   - `.cinfo`，查询个人信息
+   - `.ar_of_eth [address]`，查询某个地址的account rank
+   - `.ar_top`，查询top5 account rank信息
+   - `.get_cat`，获取CAT Token介绍
+
+### 加入我们一起玩转 ETHerACTIVISTS
+目前ETHERACT的原型由@Tastingo 开发完成，欢迎在下面留下任何你对ETHERACT的想法，加入我们一起玩转ETHEACT！
 
 ### 语言
 #### [EN](README.md)|[中文](README.zh.md)
