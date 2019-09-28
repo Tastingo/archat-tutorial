@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+
+\input{../common/common.tex}
+\usepackage{indentfirst}
+\usepackage{paralist}
+\setlength{\parindent}{2.1em}
+\setlength{\parskip}{0.3\baselineskip}
+\newcommand{\dom}{{\; \texttt{dom}\;}}
+%\addbibresource{reference.bib}
+\begin{document}
+\pagestyle{empty}
+
+\pagecolor{\pcolor}
+  \begin{center}
+	\vspace*{0.5cm}
+	\vspace{0.5cm}
+	\textbf{\huge{The Introduction to CAT}}
+	\vspace{0.5cm}
+	\textbf{}
+\end{center}
+\setcounter{page}{0}
+%\thispagestyle{empty}
+\pagestyle{fancy}
+\vspace*{0.01cm}
+%maintext here
+The Introduction to CAT
+
+CAT (Chat Token) is the only token for AR chatroom.
+
+\section*{The usage of CAT}:
+CAT	is used for entering AR chatroom. 
+
+\section{Charging Mechanism for AR chatroom}
+\begin{itemize}
+\item For addresses with AR$>26$ (Correspondingly, AR Top 10000 addresses in ETH), they are free to enter AR chatroom. 
+\item For addresses with AR$<26$, they should pay 6 CATs to enter AR chatroom in a period (around 3 days).
+\end{itemize}
+\section*{How to get CAT}
+\begin{enumerate}
+\item	In each period, for all addresses with AR$>26$, randomly draw 100 addresses and airdrop 6 CATs to each of them.
+\item	In each period, each address that entering AR chatroom is given CATs with amount equals to the address’s AR
+\item	Buy CATs by ETH through the exchange method of specific smart contract
+\end{enumerate}
+Note: User should pay 6 CATs first to enter AR chatroom and then receive the CATs from item 2 above.
+
+\section*{Rules for buying CATs through contract}
+The price is given by the “simple curve” model, that is, the required ETH for buying CATs is related to the total amount of CATs that are sold.
+
+Definition of the curve: 
+$y=ax$,
+
+where $x$ is the amount of tokens that are sold (in HU=$10^{-3}$ CAT), $y$ is the required amount of ETH (in wei=10-18 ETH) for buying one HU in current situation ($x$ HUs are sold). $a$ is defined to be 7142800.
+
+For example: when there are total 100 CATs are sold, $x=100*10^3=10^5$, the price for 1 HU is
+
+$105*7142800*10^{-18}=7.1428*10^{-7}$ ETH$=0.14*10^{-3}$, that is, 1 CAT is valued 0.14\$.
+
+The variable $x$, that measures the total amount of Hus that are sold, is autonomously decreasing by time, with the rate that for each 5 blocks in ETH, $x$ decreases by 1. Upon this setting, $x$ decreases by around 1000 each day, that is, the amount of CATs that are sold decreases by 1 each day.
+
+\section*{Analysis}
+The following analysis are aimed to one period.
+\begin{itemize}
+\item Top 10000 users (AR$>26$) are free to AR chatroom, and can get at most 26 CATs. 
+\item Users with rank from 10000 to 20000 ($6<$AR$<26$) should pay 6 CATs to enter AR chatroom, and then receive CATs with amount equals to the users’ AR. So the user’s profit is positive if he enters AR chatroom. 
+\item Users with rank of 20000 after (AR$<6$) should pay 6 CATS to enter AR chatroom, and then receive CATs with amount equals to the users’ AR. The user can not get positive profit, so he needs to buy CATs through the contract or other users to continuously use AR chatroom.  
+\end{itemize}
+
+
+\end{document}

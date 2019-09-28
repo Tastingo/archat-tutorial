@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}
+\input{../common/common.tex}
+\usepackage{indentfirst}
+
+
+\setCJKmainfont[BoldFont = STSongti-SC-Bold]{STSongti-SC-Regular}
+\setCJKfamilyfont{hei}{SIL-Hei-Med-Jian}		%宋体
+\setCJKfamilyfont{song}{SimSun}		%宋体
+\setCJKfamilyfont{kai}{Kaiti}		%楷体
+\setCJKfamilyfont{fang}{song}	%仿宋
+\setCJKfamilyfont{li}{song}			%隶书
+\setCJKfamilyfont{you}{Yuanti}		%幼圆
+
+\newcommand{\song}{\CJKfamily{song}}	%宋体
+\newcommand{\hei}{\CJKfamily{hei}}	%黑体
+\newcommand{\kai}{\CJKfamily{kai}}	%楷体
+\newcommand{\fs}{\CJKfamily{fang}}	%仿宋
+\newcommand{\li}{\CJKfamily{li}}		%隶书
+\newcommand{\you}{\CJKfamily{you}}	%幼圆
+\newcommand{\reffig}[1]{图\ref{#1}}
+\newcommand{\refsec}[1]{\S \ref{#1}}
+
+\onehalfspacing   % ----------设置1.5倍行距（可能有意义，待调整）
+\setlength{\parindent}{2.1em}
+\setlength{\parskip}{0.3\baselineskip}
+\newcommand{\dom}{{\; \texttt{dom}\;}}
+
+\setCJKsansfont[BoldFont = STHeitiSC-Medium]{STHeitiSC-Light}
+
+
+\newtheorem{property}{特征}
+%\addbibresource{reference.bib}
+
+\begin{document}
+\pagestyle{empty}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\refname}{发表文献}
+%\renewcommand{\nomname}{术语表（按首字母排序）}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\appendixname}{附录}
+\renewcommand{\proofname}{证明}
+
+\pagecolor{\pcolor}
+
+
+  \begin{center}
+    \vspace*{0.5cm}
+    \vspace{0.5cm}
+    \textbf{\huge{CAT介绍}}
+    \vspace{0.5cm}
+    \textbf{}
+  \end{center}
+\setcounter{page}{0}
+%\thispagestyle{empty}
+%\tableofcontents
+\pagestyle{fancy}
+\vspace*{0.01cm}
+%main text
+CAT，全称Chat Token，是AR聊天室运营所需的唯一代币。
+\section*{CAT的作用}
+
+CAT是用于进入AR聊天室所需的凭证。
+
+\section*{AR聊天室收费机制}
+\begin{itemize}
+\item AR>26的地址（对应以太坊排名约前10000）进入聊天室不需要要支付任何CAT。
+\item AR<26的地址在一个周期内（约3天）进入聊天室需支付$6$CAT。
+\end{itemize}
+\section*{如何获得CAT}
+\begin{enumerate}
+\item 每个周期在所有AR>26的地址中，随机抽取100个地址空投$6$CAT
+\item 每个周期对进入聊天室的地址给予等同于其AR的CAT
+\item 通过调用特定合约的exchange方法用ETH购买
+\end{enumerate}
+注：用户需要先支付6CAT进入聊天室，随后才会能获得上述第二条给予的CAT
+
+\section*{合约购买规则}
+合约采用“单曲线”模型定价，即购买CAT所需的ETH与累计已售出CAT数目有关。
+
+曲线定义：$ y=ax
+$
+
+其中$x$为已售出代币数量，单位为HU$=10^{-3}$ CAT, $y$为当前状况下（已售出$x$ HU），购买一HU需要支付的ETH数量（单位为wei$=10^{-18}$ETH）。系数$a$定义为7142800
+
+举例：累计卖出100个CAT时，$x=100*10^3=10^5$，此时一个HU价值约
+$10^5*7142800*10^{-18}=7.1428*10^{-7}$ ETH$=10^{-3} $RMB，即相当于1个CAT价值1RMB。
+
+同时，已售出HU数量$x$随时间自动触发衰减，目前速率为每隔5个以太坊区块高度（约75s）$x$减少1。在此设定下1天$x$大约减少1000，即已售出CAT数量每天减1。
+
+\section*{分析}
+以下分析均针对一个周期而言。
+ \begin{itemize}
+\item AR>26（对应前10000名）的用户可免费进入聊天室，且每个周期领到最高26的CAT
+\item 6<AR<26（对应10000-20000名）的用户需要支付$6$ CAT以进入聊天室，进入之后随即能领到等于其AR的CAT，因为AR>6故此类用户通过AR聊天室能获得正收益。
+\item AR<6（对应20000名以后（的用户需要支付$6$ CAT门票以进入聊天室，进入之后随即领到等于其AR的CAT，因AR<6故此类用户无法获得正收益，故需要向合约或者其他人购买CAT才能持续享受AR聊天室服务。
+\end{itemize}
+
+\end{document}
