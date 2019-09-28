@@ -17,12 +17,12 @@ ETHERACT聊天室是为ETH地址提供的一个匿名的聊天室。聊天室中
    - 聊天室是为以太坊的“活跃”地址提供的，智能合约会按照地址的“活跃度”分数在地址完成绑定后想地址发放CAT token，你需要至少持有6个CAT token才能在聊天室中聊天。
 
 #### 2. 活跃度分数是如何计算的?
-   - 我们参考了账户指数算法来计算地址的活跃度。账户活跃度主要由该地址的币量、币龄和地址交易关系图计算决定。了解更多关于[账户指数](https://github.com/Tastingo/archat-tutorial/blob/master/ar-ch.pdf)。
+   - 我们参考了账户指数算法来计算地址的活跃度。账户活跃度主要由该地址的币量、币龄和地址交易关系图计算决定。了解更多关于[账户指数](https://github.com/Tastingo/archat-tutorial/blob/master/AR/ch/main.pdf)。
     
 #### 3. CAT 是什么，如何获得CAT？
    - CAT是进入聊天室的代币，只有持有最少6个CAT的地址才能进入聊天室；
    - 进入聊天室绑定地址后，CAT合约会根据地址的活跃度向地址发放CAT；
-   - 你也可以调用CAT合约中的`exchange`功能，向合约发送ETH，兑换CAT。了解CAT的[兑换模型](https://github.com/Tastingo/archat-tutorial/blob/master/cat-ch.pdf)。
+   - 你也可以调用CAT合约中的`exchange`功能，向合约发送ETH，兑换CAT。了解CAT的[兑换模型](https://github.com/Tastingo/archat-tutorial/blob/master/CAT/ch/main.pdf)。
    
 #### 4. 玩转聊天室相关指令
    - `.cbind [address]:[signature]`，绑定（以太坊）地址与nickname的签名
