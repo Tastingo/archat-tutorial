@@ -14,7 +14,7 @@ The Chatroom is built upon IRC, to enter into the chatroom, you need to be an ac
 * Type `".help"` to view the complete list of commands of the chatroom;
 * Type `".cbind"` to call the chat_bot to bind your address, you will enter into a private chat with the chatbot;
 * Enter [your eth address]:[your signature of nick] in the private chat;
-* To get you signature of the nick, visit the [website](http://39.107.32.62:8020). If you would like to sign offline, visit the [repo](https://github.com/Tastingo/web3js-signature);
+* To get you signature of the nick, visit the [website](http://archat.io/signature/index.html). If you would like to sign offline, visit the [repo](https://github.com/Tastingo/web3js-signature);
 * Then you could go back to the chatroom and chat with the ETHers！ 
 
 ### FAQs
@@ -27,7 +27,7 @@ The Chatroom is built upon IRC, to enter into the chatroom, you need to be an ac
 #### 3. What is CAT and how could I get CAT?
 * CAT is the native token of the chatroom, you need to holder a minimum balance of 6 CAT to stay in the chat room;
 * You will be dropped with CAT by the time you bind your address to your nickname;
-* You could also get through the [CAT contract](https://ropsten.etherscan.io/address/0x351C54BE57c7d49CB074A47E030d8c5994eEAA16) by call the `exchange` in the smart contract by sending a certain amount of ETH. To Understand about the exchange rate of ETH and CAT , please visit [CAT price model](https://github.com/Tastingo/archat-tutorial/blob/master/CAT/en/main.pdf).
+* You could also get through the [CAT exchange website](http://archat.io/exchange/index.html) by sending a certain amount of ETH. To Understand about the exchange rate of ETH and CAT , please visit [CAT price model](https://github.com/Tastingo/archat-tutorial/blob/master/CAT/en/main.pdf).
 
 #### 4. Other interesting commands to play around
  *  `.cinfo`，Check your personal information, like your `"activity score"`
