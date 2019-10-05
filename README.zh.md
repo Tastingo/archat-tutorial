@@ -31,6 +31,10 @@ ETHERACT聊天室是为ETH地址提供的一个匿名的聊天室。聊天室中
    - `.ar_top`，查询top5 account rank信息
    - `.get_cat`，获取CAT Token介绍
 
+#### 5. 绑定聊天室视频教程：
+   - 用metamask签名绑定 https://youtu.be/tQj_othhv4s
+   - 用Keystore签名绑定 https://youtu.be/aI07VJJk7Rk
+ 
 ### 加入我们一起玩转 ETHerACTIVISTS
 目前ETHERACT的原型由@Tastingo 开发完成，欢迎在下面留下任何你对ETHERACT的想法，加入我们一起玩转ETHEACT！
 
