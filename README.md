@@ -34,6 +34,10 @@ The Chatroom is built upon IRC, to enter into the chatroom, you need to be an ac
  *  `.ar_of_eth [address]`，check the `"activity score"` of a certain ETH address
  *  `.ar_top`，check the info of the addresses with top 5 `"activity score"`
  *  `.get_cat`，check the info of CAT 
+ 
+#### 5. Video tutorial for signing into the chatroom
+* Signin with metamask:https://youtu.be/tQj_othhv4s
+* Sign in with your keystore:https://youtu.be/aI07VJJk7Rk
     
 
 ### Share your ideas with the ETHerACTIVISTS
